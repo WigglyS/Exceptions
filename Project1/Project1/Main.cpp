@@ -30,12 +30,19 @@ void main(){
 				throw s;
 			}
 			else {
-				cout << "100/" << num << "is " << (100 / num) << endl;
+				cout << "100/" << num << " is " << (100 / num) << endl;
 			}
 
 			// then if their num is below 100 i try to add it to the vector and if its 99 you get an out of range exception
 			if (num < 100) {
-				IntVector[num];
+				
+				if (num == 99) {
+					string v = "Out of range please use another number";
+					throw v;
+				}
+				else {
+					IntVector[num] = num;
+				}
 				throw num;
 			}
 		}
